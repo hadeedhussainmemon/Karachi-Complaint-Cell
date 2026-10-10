@@ -222,7 +222,7 @@ export default function ComplaintPage() {
 
           {/* Stepper Progress bar */}
           {step <= 4 && (
-            <div className="flex items-center justify-between mb-8 select-none">
+            <div className="flex items-center justify-between mb-8 select-none overflow-x-auto pb-2 scrollbar-hide">
               {[1, 2, 3, 4].map((s) => (
                 <React.Fragment key={s}>
                   <div className="flex flex-col items-center">
@@ -318,7 +318,7 @@ export default function ComplaintPage() {
                         setUnionCouncil(e.target.value);
                         setSector(karachiTowns[e.target.value]?.[0] || '');
                       }}
-                      className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                      className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-4 py-3 sm:py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     >
                       {karachiDistricts.map((d) => (
                         <option key={d} value={d} className="dark:bg-gray-900">
@@ -335,7 +335,7 @@ export default function ComplaintPage() {
                     <select
                       value={sector}
                       onChange={(e) => setSector(e.target.value)}
-                      className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                      className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-4 py-3 sm:py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     >
                       {(karachiTowns[unionCouncil] || []).map((t) => (
                         <option key={t} value={t} className="dark:bg-gray-900">
@@ -424,7 +424,7 @@ export default function ComplaintPage() {
                   <select
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
-                    className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-4 py-3 sm:py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   >
                     {categories.map((cat) => (
                       <option key={cat} value={cat} className="dark:bg-gray-900">
@@ -645,6 +645,7 @@ export default function ComplaintPage() {
     </>
   );
 }
+
 
 
 
