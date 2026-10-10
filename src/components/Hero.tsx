@@ -7,15 +7,13 @@ import { ArrowRight, ClipboardList, Map, ShieldAlert, Sparkles } from 'lucide-re
 
 import { useLanguage } from '@/components/LanguageProvider';
 
-export default function Hero() {
+export default function Hero({ content }: { content?: any }) {
   const { t } = useLanguage();
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-b from-primary/5 via-transparent to-transparent pt-12 pb-20 md:pt-20 md:pb-32">
+    <div className="relative w-full bg-background pt-16 pb-20 md:pt-20 md:pb-32">
       
       {/* Decorative Floating Blurs */}
-      <div className="absolute top-1/4 left-1/10 h-72 w-72 rounded-full bg-primary/10 blur-3xl animate-pulse-slow"></div>
-      <div className="absolute top-1/3 right-1/10 h-80 w-80 rounded-full bg-accent/10 blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-secondary/10 blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
+      
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
@@ -28,7 +26,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary dark:bg-accent/10 dark:text-accent border border-primary/20 dark:border-accent/20 shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-primary/10 text-primary dark:bg-accent/10 dark:text-accent border border-primary/20 dark:border-accent/20 shadow-sm"
             >
               <Sparkles className="h-3 w-3 text-secondary animate-spin" />
               <span>{t('heroBadge')}</span>
@@ -38,10 +36,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white"
+              className="text-4xl md:text-5xl font-bold tracking-tight leading-none text-gray-900 dark:text-white"
             >
-              {t('heroTitle1')} <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                {t('heroTitle2')}
+              {content?.heroTitle1 || t('heroTitle1')} <span className="text-primary">
+                {content?.heroTitle2 || t('heroTitle2')}
               </span>
             </motion.h1>
 
@@ -62,19 +60,19 @@ export default function Hero() {
             >
               <Link
                 href="/complaint"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-2xl shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5"
               >
                 <ClipboardList className="h-5 w-5 text-secondary" />
-                {t('submitComplaintBtn')}
+                {content?.submitBtnText || t('submitComplaintBtn')}
                 <ArrowRight className="h-4.5 w-4.5 text-secondary" />
               </Link>
               
               <Link
                 href="/locations"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl border border-gray-300 dark:border-gray-800 shadow-md transition-all duration-200 hover:-translate-y-0.5"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl border border-gray-300 dark:border-gray-800 shadow-md transition-all duration-200 hover:-translate-y-0.5"
               >
                 <Map className="h-5 w-5 text-primary" />
-                {t('exploreLocations')}
+                {content?.exploreBtnText || t('exploreLocations')}
               </Link>
             </motion.div>
             
@@ -105,7 +103,7 @@ export default function Hero() {
           <div className="lg:col-span-5 flex justify-center items-center relative z-0">
             
             {/* Floating Glow Orb Behind Map */}
-            <div className="absolute h-80 w-80 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+            
 
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -160,7 +158,7 @@ export default function Hero() {
               </svg>
               
               {/* Interface Card Floating inside hero */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl p-4 border border-white/20 dark:border-gray-800/40 flex items-center justify-between shadow-lg">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-xl p-4 border border-white/20 dark:border-gray-800/40 flex items-center justify-between shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400">
                     <ShieldAlert className="h-5 w-5" />
@@ -170,7 +168,7 @@ export default function Hero() {
                     <p className="text-[10px] text-gray-500 font-semibold">Saddar • In Progress</p>
                   </div>
                 </div>
-                <span className="text-[10px] font-black uppercase text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-black uppercase text-secondary bg-secondary/10 px-2 py-0.5 rounded-md">
                   Urgent
                 </span>
               </div>
@@ -184,6 +182,7 @@ export default function Hero() {
     </div>
   );
 }
+
 
 
 

@@ -43,21 +43,48 @@
 }
 
 :root {
-  --background: #f9fafb;
-  --foreground: #111827;
-  --card: #ffffff;
-  --card-foreground: #111827;
-  --border: #e5e7eb;
-  --ring: rgba(15, 118, 110, 0.3);
+  --background: 44 26% 96%; /* #F5F3ED - Warm white */
+  --foreground: 147 21% 16%; /* #20312A - Primary text */
+  --card: 0 0% 100%; /* #FFFFFF - Surface */
+  --card-foreground: 147 21% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 147 21% 16%;
+  --primary: 151 49% 12%; /* #12372A - Deep green */
+  --primary-foreground: 44 26% 96%;
+  --secondary: 150 56% 33%; /* #24845A - Emerald */
+  --secondary-foreground: 44 26% 96%;
+  --muted: 146 7% 37%; /* #5D6B63 - Muted text */
+  --muted-foreground: 146 7% 37%;
+  --accent: 40 64% 57%; /* #D7A94B - Gold accent */
+  --accent-foreground: 151 49% 12%;
+  --destructive: 354 67% 42%; /* #B42332 - Error */
+  --destructive-foreground: 0 0% 100%;
+  --border: 130 18% 85%; /* #D9E1DA - Border */
+  --input: 130 18% 85%;
+  --ring: 150 56% 33%;
+  --radius: 0.5rem; /* Restrained radii */
 }
 
 .dark {
-  --background: #030712;
-  --foreground: #f9fafb;
-  --card: #111827;
-  --card-foreground: #f9fafb;
-  --border: #1f2937;
-  --ring: rgba(56, 189, 248, 0.3);
+  --background: 151 49% 10%; /* Darker Deep Green */
+  --foreground: 44 26% 96%;
+  --card: 151 49% 14%;
+  --card-foreground: 44 26% 96%;
+  --popover: 151 49% 14%;
+  --popover-foreground: 44 26% 96%;
+  --primary: 150 56% 33%; /* Emerald for actions in dark mode */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 151 49% 25%;
+  --secondary-foreground: 44 26% 96%;
+  --muted: 146 7% 60%;
+  --muted-foreground: 146 7% 60%;
+  --accent: 40 64% 57%;
+  --accent-foreground: 151 49% 10%;
+  --destructive: 354 67% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 151 49% 20%;
+  --input: 151 49% 20%;
+  --ring: 150 56% 33%;
 }
 
 * {
@@ -148,3 +175,4 @@ body {
   z-index: 1;
   border-radius: 0.75rem;
 }
+

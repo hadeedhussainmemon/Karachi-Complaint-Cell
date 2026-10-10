@@ -368,7 +368,7 @@ export default function Navbar() {
           <div className="w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/95 dark:bg-gray-900/95 p-6 shadow-2xl backdrop-blur-md">
             
             <div className="flex items-center justify-between border-b border-gray-150 dark:border-gray-800 pb-3 mb-4">
-              <h3 className="text-lg font-black text-gray-900 dark:text-white flex items-center gap-2">
+              <h3 className="text-lg font-black text-white flex items-center gap-2">
                 <Lock className="h-5 w-5 text-primary" />
                 Change Password
               </h3>
@@ -406,7 +406,7 @@ export default function Navbar() {
                   placeholder="••••••••"
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
-                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900 dark:text-white"
+                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-white"
                   required
                 />
               </div>
@@ -418,7 +418,7 @@ export default function Navbar() {
                   placeholder="••••••••"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900 dark:text-white"
+                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-white"
                   required
                 />
               </div>
@@ -430,7 +430,7 @@ export default function Navbar() {
                   placeholder="••••••••"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-900 dark:text-white"
+                  className="flex w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-transparent px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-white"
                   required
                 />
               </div>

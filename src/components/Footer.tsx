@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Landmark, Phone, Mail, MapPin, ExternalLink, HelpCircle } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({ content }: { content?: any }) {
   return (
     <footer className="w-full bg-gray-900 text-gray-300 border-t border-gray-800 pt-16 pb-8 transition-colors duration-300 mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Bridging the gap between the Karachi Metropolitan Corporation and its citizens. Digitalizing civic services, promoting regional locations, and ensuring transparency.
+              {content?.footerAbout || "Bridging the gap between the Karachi Metropolitan Corporation and its citizens. Digitalizing civic services, promoting regional locations, and ensuring transparency."}
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                <span>KMC Head Office, M.A. Jinnah Road, Karachi, Pakistan</span>
+                <span>{content?.contactAddress || "KMC Head Office, M.A. Jinnah Road, Karachi, Pakistan"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4.5 w-4.5 text-secondary shrink-0" />
