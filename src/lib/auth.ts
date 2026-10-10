@@ -6,6 +6,13 @@ import User from '@/models/User';
 // Seed demo users in memory as absolute fallback
 const DEMO_USERS = [
   {
+    id: 'demo-techadmin-id',
+    name: 'Technical IT Director',
+    email: 'techadmin@kmc.gos.pk',
+    role: 'superadmin',
+    password: 'techadmin123',
+  },
+  {
     id: 'demo-admin-id',
     name: 'KMC Control Room Admin',
     email: 'admin@kmc.gos.pk',
@@ -101,4 +108,5 @@ export const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET || '9be36e16f3d9ce4c5462cf4c3b29bd9a43a85b9b',
 };
+
 
