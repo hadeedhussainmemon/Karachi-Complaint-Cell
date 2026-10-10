@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { dbConnect } from '@/lib/dbConnect';
-import { Complaint } from '@/models/Complaint';
+import dbConnect from '@/lib/dbConnect';
+import Complaint from '@/models/Complaint';
 import { karachiDistricts, karachiTowns } from '@/lib/karachiData';
 
 export async function GET() {
@@ -105,3 +105,4 @@ export async function GET() {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
+
