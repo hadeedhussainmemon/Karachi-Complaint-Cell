@@ -281,7 +281,7 @@ function ComplaintsContent({ initialComplaints }: AdminComplaintsClientProps) {
                 <span className="text-gray-500">Address:</span>
                 <span className="text-gray-900 dark:text-white flex items-center gap-1">
                   <MapPin className="h-3.5 w-3.5 text-primary shrink-0" />
-                  {selectedComplaint.area}, {selectedComplaint.city}
+                  {selectedComplaint.area}, {selectedComplaint.town} ({selectedComplaint.district})
                 </span>
               </div>
             </div>
@@ -410,6 +410,7 @@ export default function AdminComplaintsClient({ initialComplaints }: AdminCompla
     </Suspense>
   );
 }
+
 
 
 
