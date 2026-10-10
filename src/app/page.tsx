@@ -19,6 +19,11 @@ import {
 export const revalidate = 60; // Revalidate pages every minute (ISR)
 
 export default async function HomePage() {
+  await dbConnect();
+  let cmsContent = null;
+  try { cmsContent = await SiteContent.findOne(); } catch(e) {}
+  const contentProps = cmsContent ? JSON.parse(JSON.stringify(cmsContent)) : {};
+
   // Fetch lists from database service layer (runs server-side)
   const locations = await dbService.getLocations();
   const news = await dbService.getNews();
