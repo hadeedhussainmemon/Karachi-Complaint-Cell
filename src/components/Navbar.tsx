@@ -154,7 +154,7 @@ export default function Navbar() {
                 className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white bg-primary hover:bg-primary-hover rounded-xl shadow-md shadow-primary/15 transition-all duration-200 hover:-translate-y-0.5"
               >
                 <ClipboardList className="h-4 w-4 text-secondary" />
-                File Complaint
+                {t('fileComplaint')}
               </Link>
             )}
 
@@ -297,7 +297,7 @@ export default function Navbar() {
                 className="flex justify-center items-center gap-2 w-full py-3 font-semibold text-white bg-primary rounded-xl"
               >
                 <ClipboardList className="h-5 w-5 text-secondary" />
-                File Complaint
+                {t('fileComplaint')}
               </Link>
             )}
 
@@ -466,4 +466,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 

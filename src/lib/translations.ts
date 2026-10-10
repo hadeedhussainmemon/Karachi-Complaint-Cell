@@ -18,6 +18,12 @@ export const translations = {
     severity: 'Severity / Priority',
     unionCouncil: 'District / KMC Zone',
     sector: 'Town / Area',
+        heroBadge: 'KMC Connect Citizen Portal',
+    heroTitle1: 'Connecting Citizens',
+    heroTitle2: 'with Better Public Services',
+    heroDesc: 'Report daily civic issues like water, power, sewerage, and road damage. Explore the major districts of Pakistan's largest megacity, and stay informed on official announcements.',
+    exploreLocations: 'Explore Locations',
+    submitComplaintBtn: 'Submit Complaint',
   },
   ur: {
     fileComplaint: 'شکایت درج کریں',
@@ -43,3 +49,4 @@ export const translations = {
 
 export type Language = 'en' | 'ur';
 export type TranslationKey = keyof typeof translations.en;
+

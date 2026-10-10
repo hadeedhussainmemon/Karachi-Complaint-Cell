@@ -5,7 +5,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ClipboardList, Map, ShieldAlert, Sparkles } from 'lucide-react';
 
+import { useLanguage } from '@/components/LanguageProvider';
+
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-b from-primary/5 via-transparent to-transparent pt-12 pb-20 md:pt-20 md:pb-32">
       
@@ -28,7 +31,7 @@ export default function Hero() {
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary dark:bg-accent/10 dark:text-accent border border-primary/20 dark:border-accent/20 shadow-sm"
             >
               <Sparkles className="h-3 w-3 text-secondary animate-spin" />
-              <span>KMC Connect Citizen Portal</span>
+              <span>{t('heroBadge')}</span>
             </motion.div>
 
             <motion.h1
@@ -37,9 +40,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white"
             >
-              Connecting Citizens with{' '}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Better Public Services
+              {t('heroTitle1')} <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                {t('heroTitle2')}
               </span>
             </motion.h1>
 
@@ -63,7 +65,7 @@ export default function Hero() {
                 className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-white bg-primary hover:bg-primary-hover rounded-2xl shadow-lg shadow-primary/20 transition-all duration-200 hover:-translate-y-0.5"
               >
                 <ClipboardList className="h-5 w-5 text-secondary" />
-                Submit Complaint
+                {t('submitComplaintBtn')}
                 <ArrowRight className="h-4.5 w-4.5 text-secondary" />
               </Link>
               
@@ -72,7 +74,7 @@ export default function Hero() {
                 className="w-full sm:w-auto flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl border border-gray-300 dark:border-gray-800 shadow-md transition-all duration-200 hover:-translate-y-0.5"
               >
                 <Map className="h-5 w-5 text-primary" />
-                Explore Locations
+                {t('exploreLocations')}
               </Link>
             </motion.div>
             
@@ -130,23 +132,23 @@ export default function Hero() {
                   className="stroke-primary dark:stroke-accent"
                 />
                 
-                {/* Gwadar Marker */}
+                {/* Lyari Marker */}
                 <circle cx="20" cy="68" r="3" fill="#D4A017" className="animate-ping" />
                 <circle cx="20" cy="68" r="2" fill="#D4A017" />
-                <text x="25" y="70" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Gwadar</text>
+                <text x="25" y="70" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Lyari</text>
                 
                 {/* Quetta Marker */}
                 <circle cx="48" cy="22" r="3" fill="#38BDF8" className="animate-ping" />
                 <circle cx="48" cy="22" r="2" fill="#38BDF8" />
-                <text x="53" y="24" className="text-[3.5px] fill-gray-900 dark:fill-white font-black">QUETTA (HQ)</text>
+                <text x="53" y="24" className="text-[3.5px] fill-gray-900 dark:fill-white font-black">KMC HEAD OFFICE</text>
 
-                {/* Ziarat Marker */}
+                {/* Korangi Marker */}
                 <circle cx="58" cy="26" r="2.5" fill="#10B981" />
-                <text x="63" y="28" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Ziarat</text>
+                <text x="63" y="28" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Korangi</text>
 
-                {/* Khuzdar Marker */}
+                {/* Saddar Marker */}
                 <circle cx="44" cy="55" r="2.5" fill="#10B981" />
-                <text x="49" y="57" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Khuzdar</text>
+                <text x="49" y="57" className="text-[3.5px] fill-gray-600 dark:fill-gray-300 font-bold">Saddar</text>
 
                 {/* Gradients */}
                 <defs>
@@ -164,8 +166,8 @@ export default function Hero() {
                     <ShieldAlert className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-gray-800 dark:text-gray-200">Transformer Failure</p>
-                    <p className="text-[10px] text-gray-500 font-semibold">Khuzdar • In Progress</p>
+                    <p className="text-xs font-bold text-gray-800 dark:text-gray-200">Sewerage Overflow</p>
+                    <p className="text-[10px] text-gray-500 font-semibold">Saddar • In Progress</p>
                   </div>
                 </div>
                 <span className="text-[10px] font-black uppercase text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">
@@ -182,4 +184,7 @@ export default function Hero() {
     </div>
   );
 }
+
+
+
 
