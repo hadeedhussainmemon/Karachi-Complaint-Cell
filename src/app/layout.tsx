@@ -18,33 +18,21 @@ const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://kmc-connect.gov.pk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
-  title: "KMC Connect | Government & Citizen Complaint Portal",
-  description: "Report civic issues, track complaint statuses, explore tourist locations, and stay updated on announcements in Karachi.",
-  keywords: ["Karachi", "Complaint Portal", "Civic Services", "Saddar", "Lyari", "KMC Services"],
+  title: "KMC Connect | Karachi Citizen Complaint Portal",
+  description: "Official portal for Karachi citizens to report civic issues, track complaint statuses (SLA), and stay updated on KMC announcements.",
+  keywords: ["Karachi", "KMC Connect", "Complaint Portal", "Civic Services", "Sindh Government", "KMC Services", "Karachi Metropolitan Corporation"],
   openGraph: {
-    title: "KMC Connect | Government & Citizen Portal",
-    description: "Report civic issues, track complaint statuses, explore tourist locations, and stay updated on announcements in Karachi.",
+    title: "KMC Connect | Karachi Citizen Portal",
+    description: "Report civic issues like water, power, and road damage directly to KMC. Track your complaints with a robust 48-hour SLA system.",
     url: appUrl,
     siteName: "KMC Connect",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "KMC Connect Portal Preview",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "KMC Connect | Government & Citizen Portal",
-    description: "Report civic issues, track complaint statuses, explore tourist locations, and stay updated on announcements in Karachi.",
-    images: ["/og-image.png"],
+    title: "KMC Connect | Karachi Citizen Portal",
+    description: "Official portal for Karachi citizens to report and track civic issues.",
   },
-};
-
+}
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,6 +53,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 
