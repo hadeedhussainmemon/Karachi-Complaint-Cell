@@ -1,0 +1,45 @@
+export const translations = {
+  en: {
+    fileComplaint: 'File Complaint',
+    trackComplaint: 'Track',
+    home: 'Home',
+    locations: 'Locations',
+    adminDashboard: 'Admin Dashboard',
+    changePassword: 'Change Password',
+    signOut: 'Sign Out',
+    signIn: 'Sign In',
+    personalInfo: 'Personal Information',
+    geographicDetails: 'Geographic Details',
+    complaintDescription: 'Complaint Description',
+    attachEvidence: 'Attach Evidence & Submit',
+    district: 'District / KMC Zone',
+    town: 'Town / Area',
+    category: 'Category',
+    severity: 'Severity / Priority',
+    unionCouncil: 'District / KMC Zone',
+    sector: 'Town / Area',
+  },
+  ur: {
+    fileComplaint: 'شکایت درج کریں',
+    trackComplaint: 'ٹریک کریں',
+    home: 'ہوم',
+    locations: 'مقامات',
+    adminDashboard: 'ایڈمن ڈیش بورڈ',
+    changePassword: 'پاس ورڈ تبدیل کریں',
+    signOut: 'لاگ آؤٹ',
+    signIn: 'لاگ ان کریں',
+    personalInfo: 'ذاتی معلومات',
+    geographicDetails: 'علاقائی تفصیلات',
+    complaintDescription: 'شکایت کی تفصیل',
+    attachEvidence: 'تصاویر شامل کریں اور جمع کرائیں',
+    district: 'ضلع / KMC زون',
+    town: 'ٹاؤن / علاقہ',
+    category: 'مسئلے کی قسم',
+    severity: 'نوعیت / ترجیح',
+    unionCouncil: 'ضلع / KMC زون',
+    sector: 'ٹاؤن / علاقہ',
+  }
+};
+
+export type Language = 'en' | 'ur';
+export type TranslationKey = keyof typeof translations.en;
