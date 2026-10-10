@@ -34,7 +34,7 @@ export default function MapComponent({
 
   if (!isMounted) {
     return (
-      <div className="w-full h-full min-h-[350px] bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-sm font-semibold text-gray-500 animate-pulse">
+      <div className="w-full h-full min-h-[350px] bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-sm font-semibold text-gray-500 animate-pulse">
         Loading Interactive Maps...
       </div>
     );
@@ -56,7 +56,7 @@ export default function MapComponent({
   };
 
   return (
-    <div className="w-full h-full min-h-[350px] relative rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
+    <div className="w-full h-full min-h-[350px] relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800">
       <MapContainer
         center={center}
         zoom={zoom}
