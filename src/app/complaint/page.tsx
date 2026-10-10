@@ -179,8 +179,8 @@ export default function ComplaintPage() {
       category,
       priority,
       description,
-      unionCouncil,
-      sector,
+      district: unionCouncil,
+      town: sector,
       area,
       images: imageUrls,
       coordinates: gps || undefined,
@@ -645,6 +645,7 @@ export default function ComplaintPage() {
     </>
   );
 }
+
 
 
 
