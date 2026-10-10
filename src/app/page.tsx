@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import { dbConnect } from '@/lib/dbConnect';
+import dbConnect from '@/lib/dbConnect';
 import { SiteContent } from '@/models/SiteContent';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
