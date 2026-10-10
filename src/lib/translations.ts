@@ -23,6 +23,10 @@ export const translations = {
     heroDesc: 'Report daily civic issues like water, power, sewerage, and road damage. Explore the major districts of Pakistan\'s largest megacity, and stay informed on official announcements.',
     exploreLocations: 'Explore Locations',
     submitComplaintBtn: 'Submit Complaint',
+    personalInfo: 'Personal Information',
+    geographicDetails: 'Geographic Details',
+    complaintDescription: 'Complaint Description',
+    attachEvidence: 'Attach Evidence (Optional)',
   },
   ur: {
     fileComplaint: 'شکایت درج کریں',
@@ -46,6 +50,10 @@ export const translations = {
     heroDesc: 'روزمرہ کے مسائل جیسے پانی، بجلی، سیوریج اور ٹوٹی سڑکوں کی شکایات درج کرائیں۔ پاکستان کے سب سے بڑے شہر کے مختلف اضلاع کے بارے میں جانیں اور سرکاری اعلانات سے باخبر رہیں۔',
     exploreLocations: 'مقامات دریافت کریں',
     submitComplaintBtn: 'شکایت درج کریں',
+    personalInfo: 'ذاتی معلومات',
+    geographicDetails: 'جغرافیائی تفصیلات',
+    complaintDescription: 'شکایت کی تفصیل',
+    attachEvidence: 'ثبوت منسلک کریں (اختیاری)',
   }
 };
 
