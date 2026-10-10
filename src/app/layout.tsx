@@ -59,12 +59,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-brand-light text-foreground dark:bg-brand-dark pb-16 md:pb-0">
         <Providers>
           {children}
-        </Providers>
         <BottomNav />
+        </Providers>
       </body>
     </html>
   );
 }
+
 
 
 
